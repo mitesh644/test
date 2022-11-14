@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+/* f7ca40 */
+.container {
+    background-color: #1c1d21;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    font-size: 100px;
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    /* border-radius: 100%; */
+    /* background-color: rgba(61, 62, 66, 1); */ 
+    /* background: radial-gradient(rgba(61, 62, 66, 1), #1c1d21);  */
+    background: radial-gradient(ellipse at top, rgba(61, 62, 66, 1), transparent);
+    position: absolute;
+}
+
+.content p {
+    font-size: 40px;
+}
+
+.container p:first-child {
+    color: #9e9fa3;
+    position: relative;
+    padding-left: 14px;
+}
+
+.container p:first-child::before {
+    content: '';
+    position: absolute;
+    width: 75%;
+    height: 10px;
+    background-color: #b5a373;
+    top: 50%;
+    right: 30px;
+}
+
+.container p:last-child {
+    color: #b5a373;
+    align-self: flex-end;
+    padding-right: 30px;
+}
+
+.content h1 {
+    color: #dddddd;
+    letter-spacing: 30px;
+    text-transform: uppercase;
+}
+
+p,h1 {
+    line-height: 1;
+    margin: 0;
+}
+
+
+svg path {
+    stroke-dashoffset: 10;
+    stroke-dasharray: 10;
+    animation: draw 2s ease forwards;
+}
+
+svg g {
+    fill-opacity: 0;
+}
+
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+        /* stroke-dasharray: 1; */
+    }
+}
